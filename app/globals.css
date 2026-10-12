@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --border: 214.3 31.8% 91.4%;
+    --primary: #168BFF;
+    --primary-light: #2196FF;
+    --primary-dark: #1D4ED8;
+    --secondary: #3B82F6;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --color-text-main: #0f172a;
+    --color-text-muted: #64748b;
+    --color-bg-main: #ffffff;
+    --color-bg-card: #f8fafc;
+    --color-bg-header: rgba(255, 255, 255, 0.85);
+    --color-bg-input: #ffffff;
+    --color-border: #e2e8f0;
+    --color-glass: rgba(255, 255, 255, 0.08);
+    --color-glow: rgba(22, 139, 255, 0.1);
+  }
+
+  .dark {
+
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --color-text-main: #ffffff;
+    --color-text-muted: #94a3b8;
+    --color-bg-main: #061426;
+    --color-bg-card: #0a1f38;
+    --color-bg-header: rgba(6, 20, 38, 0.85);
+    --color-bg-input: #0a1f38;
+    --color-border: #1e293b;
+    --color-glass: rgba(255, 255, 255, 0.05);
+    --color-glow: rgba(22, 139, 255, 0.15);
+  }
+}
+
+body {
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  direction: rtl;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container-custom {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.terminal-window {
+  font-family: 'Courier New', Courier, monospace;
+  direction: ltr;
+  text-align: left;
+}
+
+.terminal-cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
